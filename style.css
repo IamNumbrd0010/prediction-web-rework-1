@@ -1,0 +1,127 @@
+/* Style for select dropdowns */
+select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #4CAF50;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  background-color: #eaf8ea;
+}
+
+select option {
+  padding: 8px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+select option:hover {
+  background-color: #d0e8d0;
+  color: #ff0000;
+}
+
+/* Optional - center the dropdown within each table cell */
+td select {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive layout adjustments */
+@media screen and (max-width: 1200px) {
+  .bet, .pred {
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bet, .pred {
+    grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bet, .pred {
+    grid-template-columns: 1fr; /* 1 column on mobile screens */
+  }
+}
+
+.bet {
+    display: grid;
+    gap: 1rem;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    
+}
+
+.pred {
+    display: grid;
+    gap: 1rem;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+
+}
+
+/* Container styling */
+.matches-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead th {
+    background-color: #af4c4c;
+    color: white;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  tbody td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive styling */
+  @media screen and (max-width: 768px) {
+    thead {
+      display: none;
+    }
+  
+    tbody, tr, td {
+      display: block;
+      width: 100%;
+    }
+  
+    tbody td {
+      text-align: right;
+      padding: 10px;
+      position: relative;
+    }
+  
+    tbody td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+    
+  }
+
+  
